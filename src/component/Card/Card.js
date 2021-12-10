@@ -8,19 +8,14 @@ function Card(props) {
       <div className="card">
         <div className="card__left">
           <div className="card__left-img-box">
-            <img
-              alt="avatar"
-              className="card__left-img"
-              id="previewAvatar"
-              src={props.avatar}
-            />
+          <img src={props.file} className="card__left-img" alt='foto'/>
           </div>
         </div>
 
         <div className="card__right">
           <div className="card__right-id-box">
             <h1 className="card__right-id">
-              <span className="card__right-id-name" id="previewName">{props.name}</span>
+              <span className="card__right-id-name" id="previewName">{props.fullname}</span>
             </h1>
           </div>
 
