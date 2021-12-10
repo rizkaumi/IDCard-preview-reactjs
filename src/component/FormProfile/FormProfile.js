@@ -44,7 +44,7 @@ function FormProfile(props) {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setData([...data, {"id":data.length +1, "name":name, "birthdate":birthdate, "idnumber":idnumber, "email":email, "gender":gender, "religion":religion, "avatar":avatar}])
+    setData([...data, {"id":data.length +1, "name":name, "birthdate":birthdate, "idnumber":idnumber, "email":email, "gender":gender, "religion":religion, 'avatar':avatar}])
     setForm({
       name: "",
       birthdate: "",
@@ -53,7 +53,7 @@ function FormProfile(props) {
       gender: "",
       religion: "" 
     })
-    
+    setAvatar("")
   }  
   const handleReset = () => {
     Array.from(document.querySelectorAll("input")).forEach(
@@ -94,17 +94,7 @@ function FormProfile(props) {
   const setModalIsOpenToFalse =()=>{
       setModalIsOpen(false)
   }
-  const customStyles = {
-    content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)',
-      backgroundColor       : '#F0AA89'      
-    }
-  };
+  
   return (
     <>
     <div className="form-wrapper">
@@ -219,7 +209,7 @@ function FormProfile(props) {
           <button className="Previewbutton" id="button" type="button" onClick={setModalIsOpenToTrue}>
             Preview
           </button>
-          <Modal isOpen={modalIsOpen} style={customStyles} onRequestClose={()=> setModalIsOpen(false)}>
+          <Modal isOpen={modalIsOpen} onRequestClose={()=> setModalIsOpen(false)}>
             <button onClick={setModalIsOpenToFalse} 
             style={{background: "#4d4d4d", border: "none", width: '20px', height:'20px', color: "#ffff", marginTop:"10px", marginLeft:"10px"}}>x</button>
              <div className="form-field-button">
