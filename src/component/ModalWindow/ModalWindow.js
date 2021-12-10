@@ -12,7 +12,7 @@ function ModalWindow(props){
                 
         {props.data.map(data => (
             <div className="card-data" key={data.id}>
-                    <Card key={data.length} name={data.name} birthdate={data.birthdate} idnumber={data.idnumber} email={data.email} gender={data.gender} religion={data.religion} avatar={data.avatar}/>
+                    <Card key={data.length} fullname={data.fullname} idnumber={data.idnumber} birthdate={data.birthdate} email={data.email} gender={data.gender} religion={data.religion} file={data.file}/>
                 </div>
             ))
         }
