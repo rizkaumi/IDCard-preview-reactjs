@@ -1,0 +1,243 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    background-image : './background-gray.png';
+    box-sizing: border-box;
+  
+    font-family: "Lato", sans-serif;
+    color: #545454;
+    font-size: 1.6rem;
+    position: center;
+}
+  
+.form-wrapper {
+    width: 50rem;
+    background-color: #f2f2f2;
+    
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin-left: 30%;
+    
+  }
+  
+  .form-field-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+  }
+  
+  .form-group-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .form-group {
+    margin-right: 2rem;
+    width: 100%;
+    text-align: left;
+    
+  }
+  
+  .merge {
+    width: 100%;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+
+  .form-heading__box {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-heading__text {
+    margin-bottom: 1rem;
+  }
+  
+  .form-data-label {
+    display: inline-block;
+    font-size: 1.65rem;
+    font-family: "Calibri";
+    margin-bottom: 0.1rem;
+  }
+  
+  .form-data-input {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 0.2rem solid #86b8dc;
+    
+  }
+  
+  .form-data-input:focus {
+    outline: none;
+  }
+  
+  .form-group-radio {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-data-radio {
+    display: none;
+  }
+  
+  .form-data-label__radio {
+    font-size: 1.5rem;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+  
+  .form-radio-button {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 0.5rem solid #86b8dc;
+  
+    position: absolute;
+    
+  }
+  
+  .form-radio-button::after {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #1a98da;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    opacity: 0;
+  }
+  
+  .form-data-radio:checked ~ .form-data-label__radio .form-radio-button::after {
+    opacity: 1;
+  }
+  
+  .checkbox {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-select__group {
+    height: 50%;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.6rem;
+    border-bottom: 0.2rem solid #86b8dc;
+  }
+  
+  .form-select {
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+  
+  .form-data-input picture-form {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.6rem;
+    background-color: #ffffff;
+    border-bottom: 0.2rem solid #86b8dc;
+    
+  }
+  
+  .form-field-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin-top: 1rem;
+  }
+  .Submitbutton {
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-size: 1.8rem;
+    font-weight: 700;
+    
+    background-color: #298dff;
+    border: none;
+    width: 15rem;
+    padding: 1rem;
+  
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  
+    margin-top: 1rem;
+    transition: all 0.5s;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  .Previewbutton {
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-size: 1.8rem;
+    font-weight: 700;
+    
+    background-color: #ffa929;
+    border: none;
+    width: 15rem;
+    padding: 1rem;
+  
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin-top: 1rem;
+    transition: all 0.5s;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  .Resetbutton {
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-size: 1.8rem;
+    font-weight: 700;
+    
+    background-color: #ff3729;
+    border: none;
+    width: 15rem;
+    padding: 1rem;
+  
+    cursor: pointer;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin-top: 1rem;
+    transition: all 0.5s;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  .button:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:active {
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+  }
